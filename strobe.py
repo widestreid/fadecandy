@@ -2,10 +2,11 @@
 
 # Open Pixel Control client: All lights to solid white
 
-import opc, time
+import time
+from opc import Client
 
 numLEDs = 47
-client = opc.Client('192.168.1.73:7890')
+client = Client('192.168.1.73:7890')
 
 black = [ (0,0,0,0) ] * numLEDs
 white = [ (255,0,0,0) ] * numLEDs
